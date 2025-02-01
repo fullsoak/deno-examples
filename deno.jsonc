@@ -1,0 +1,16 @@
+{
+  "imports": {
+    "fullsoak": "jsr:@fullsoak/fullsoak@0.6.0-alpha.10",
+    "htm/preact": "npm:htm@3.1.1/preact",
+    "preact": "npm:preact@10.25.4"
+  },
+  "nodeModulesDir": "auto",
+  "compilerOptions": {
+    "jsx": "precompile", // see https://docs.deno.com/runtime/reference/jsx/#jsx-precompile-transform
+    "jsxImportSource": "preact",
+    "jsxPrecompileSkipElements": ["a", "link"]
+  },
+  "tasks": {
+    "dev": "deno -A --watch src/main.ts"
+  }
+}
