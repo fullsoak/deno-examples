@@ -13,6 +13,8 @@ feel free to open a PR / discussion. Thank you for your interest!
 This example is written on & for Deno ecosystem. In theory, it's compatible with
 Node.js and Bun (corresponding example repos are welcomed as PRs).
 
+Install Deno: https://docs.deno.com/runtime/getting_started/installation/
+
 ### Start the example
 
 ```bash
