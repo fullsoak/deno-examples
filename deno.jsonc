@@ -8,7 +8,8 @@
   "compilerOptions": {
     "jsx": "precompile", // see https://docs.deno.com/runtime/reference/jsx/#jsx-precompile-transform
     "jsxImportSource": "preact",
-    "jsxPrecompileSkipElements": ["a", "link"]
+    "jsxPrecompileSkipElements": ["a", "link"],
+    "experimentalDecorators": false // https://deno.com/deploy/changelog#es-decorators-are-enabled-on-deno-deploy-replacing-experimental-ts-decorators
   },
   "tasks": {
     "dev": "deno -A --watch src/main.ts",
