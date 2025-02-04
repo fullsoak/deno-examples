@@ -1,4 +1,4 @@
-import { lazy, LocationProvider, ErrorBoundary, Router, Route, prerender, hydrate } from 'fullsoak/preact-iso';
+import { lazy, LocationProvider, ErrorBoundary, Router, Route } from 'fullsoak/preact-iso';
 
 // Synchronous
 import { Home } from './routes/Home.tsx';
@@ -8,11 +8,10 @@ import { Profiles } from './routes/Profiles.tsx';
 const Profile = lazy(() => import('./routes/Profile.tsx').then(cmp => cmp.Profile));
 const NotFound = lazy(() => import('./routes/_404.tsx').then(cmp => cmp.NotFound));
 
-// const PreloadedProfile = (await Profile.preload()).Profile;
-// console.log("Profile", PreloadedProfile);
+type AppProps = { url: string }
 
-export const MyRouteAwareComponent = () => (
-	<LocationProvider scope="/app">
+export const MyRouteAwareComponent = ({ url }: AppProps) => (
+	<LocationProvider url={url} scope="/app">
 		<ErrorBoundary>
 			<Router>
 				<Home path="/app" />
@@ -25,5 +24,3 @@ export const MyRouteAwareComponent = () => (
 		</ErrorBoundary>
 	</LocationProvider>
 );
-
-// export const SsredApp = prerender(<MyRouteAwareComponent />);

@@ -1,8 +1,8 @@
 {
   "imports": {
-    "fullsoak": "jsr:@fullsoak/fullsoak@0.6.0-alpha.10",
-    "htm/preact": "npm:htm@3.1.1/preact",
-    "preact": "npm:preact@10.25.4"
+    "fullsoak": "jsr:@fullsoak/fullsoak@0.6.0-rc.2",
+    "preact": "npm:preact@10.25.4",
+    "@std/testing": "jsr:@std/testing@^1.0.9"
   },
   "nodeModulesDir": "auto",
   "compilerOptions": {
@@ -11,6 +11,7 @@
     "jsxPrecompileSkipElements": ["a", "link"]
   },
   "tasks": {
-    "dev": "deno -A --watch src/main.ts"
+    "dev": "deno -A --watch src/main.ts",
+    "test": "deno test -NIER --allow-ffi"
   }
 }
