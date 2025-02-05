@@ -3,10 +3,9 @@
 FullSoak is a no-build TypeScript fullstack SSR-first framework. This repo hosts
 several examples using FullSoak.
 
-WARNING: as the
-[FullSoak framework](https://jsr.io/@fullsoak/fullsoak@0.6.0-rc.2) is still in
-an early development phase, breaking changes are expected. When in doubt, please
-feel free to open a PR / discussion. Thank you for your interest!
+WARNING: as the [FullSoak framework](https://jsr.io/@fullsoak/fullsoak) is still
+in an early development phase, breaking changes are expected. When in doubt,
+please feel free to open a PR / discussion. Thank you for your interest!
 
 ## Available commands
 
