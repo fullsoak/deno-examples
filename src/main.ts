@@ -26,7 +26,7 @@ class MyController {
   @Get("/app/:page")
   @Get("/app/:page/:sup1")
   renderMyRouteAwareComponent(ctx: Context) {
-    return ssr(MyRouteAwareComponent, { url: ctx.request.url.pathname });
+    return ssr(MyRouteAwareComponent, { url: ctx.request.url.href });
   }
 
   @Get("/components/:parentComponent/routes/:routeComponent")
