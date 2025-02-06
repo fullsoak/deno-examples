@@ -1,4 +1,4 @@
-# fullsoak examples
+# fullsoak examples on Deno
 
 FullSoak is a no-build TypeScript fullstack SSR-first framework. This repo hosts
 several examples using FullSoak.
@@ -9,8 +9,7 @@ please feel free to open a PR / discussion. Thank you for your interest!
 
 ## Available commands
 
-This example is written on & for Deno ecosystem. In theory, it's compatible with
-Node.js and Bun (corresponding example repos are welcomed as PRs).
+This repo is prepared for the Deno runtime.
 
 Install Deno: https://docs.deno.com/runtime/getting_started/installation/
 
@@ -27,3 +26,7 @@ Then head to `http://127.0.0.1:3991/app` to browse around.
 ```bash
 deno task test
 ```
+
+## Other platforms
+
+Examples for Bun runtime: https://github.com/fullsoak/bun-example
