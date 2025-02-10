@@ -29,4 +29,4 @@ deno task test
 
 ## Other platforms
 
-Examples for Bun runtime: https://github.com/fullsoak/bun-example
+Examples for Bun runtime: https://github.com/fullsoak/bun-examples
