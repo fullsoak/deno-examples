@@ -29,7 +29,7 @@ jobs:
           node-version: lts/*
 
       - name: Install step
-        run: "deno install --allow-scripts=npm:@swc/core"
+        run: "deno install --allow-scripts=npm:@swc/core@1.10.15"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
@@ -37,3 +37,5 @@ jobs:
           project: "fullsoak-examples"
           entrypoint: "src/main.ts"
           root: ""
+          
+          
