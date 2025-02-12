@@ -2,7 +2,7 @@
   "version": "4",
   "specifiers": {
     "jsr:@dklab/oak-routing-ctrl@0.14": "0.14.0",
-    "jsr:@fullsoak/fullsoak@0.7.0": "0.7.0",
+    "jsr:@fullsoak/fullsoak@0.7.1": "0.7.1",
     "jsr:@oak/commons@1": "1.0.0",
     "jsr:@oak/oak@^17.1.4": "17.1.4",
     "jsr:@std/assert@1": "1.0.11",
@@ -44,8 +44,8 @@
         "npm:zod"
       ]
     },
-    "@fullsoak/fullsoak@0.7.0": {
-      "integrity": "501b8ac3cb8619f95c7fc2c583e0261e3716ec060566f3a8034c6e45fb7c5fc5",
+    "@fullsoak/fullsoak@0.7.1": {
+      "integrity": "2bc03edc85bfb056e60395e8f1247d92ef5847ae1fcaffe26c900a3e4ea1b1ab",
       "dependencies": [
         "jsr:@dklab/oak-routing-ctrl",
         "jsr:@oak/oak",
@@ -261,7 +261,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@fullsoak/fullsoak@0.7.0",
+      "jsr:@fullsoak/fullsoak@0.7.1",
       "jsr:@std/testing@^1.0.9",
       "npm:preact-iso@2.9.0",
       "npm:preact@10.25.4"
