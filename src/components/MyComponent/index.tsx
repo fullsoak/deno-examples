@@ -33,6 +33,12 @@ export const MyComponent: FunctionComponent<MyProps> = ({ foo }) => {
         </ul>
       </section>
       <MyOtherComponent baz={count} />
+      <footer>
+        <span>source code of this website:</span>{" "}
+        <a href="https://github.com/fullsoak/bun-examples.git">
+          https://github.com/fullsoak/deno-examples
+        </a>
+      </footer>
     </>
   );
 };
