@@ -1,6 +1,6 @@
 {
   "imports": {
-    "fullsoak": "jsr:@fullsoak/fullsoak@0.8.2",
+    "fullsoak": "jsr:@fullsoak/fullsoak@0.9.0",
     "preact": "npm:preact@10.25.4",
     "preact-iso": "npm:preact-iso@2.9.0",
     "@std/testing": "jsr:@std/testing@^1.0.9"
