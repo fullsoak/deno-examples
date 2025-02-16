@@ -28,14 +28,9 @@ jobs:
         with:
           node-version: lts/*
 
-      - name: Install step
-        run: "deno add npm:esbuild"
-
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: "fullsoak-examples"
           entrypoint: "src/main.ts"
           root: ""
-          
-          

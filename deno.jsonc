@@ -1,6 +1,6 @@
 {
   "imports": {
-    "fullsoak": "jsr:@fullsoak/fullsoak@0.8.0-alpha.13",
+    "fullsoak": "jsr:@fullsoak/fullsoak@0.8.2",
     "preact": "npm:preact@10.25.4",
     "preact-iso": "npm:preact-iso@2.9.0",
     "@std/testing": "jsr:@std/testing@^1.0.9"
@@ -14,6 +14,8 @@
   },
   "tasks": {
     "dev": "deno -A --watch src/main.ts",
-    "test": "deno test -NIER --allow-ffi"
+    "test": "deno test -NIER --allow-ffi --no-check",
+    "test-update": "deno task test -W -- --update",
+    "compile": "deno compile --no-check --output=dist/main -NER --allow-ffi src/main.ts"
   }
 }
