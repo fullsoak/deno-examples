@@ -14,6 +14,7 @@ import { locationStub } from "preact-iso/prerender";
 
 // Asynchronous (throws a promise)
 import type { Props as ProfileProps } from "./routes/Profile.tsx";
+import { Media } from "./routes/Media/index.tsx";
 const Profile = lazy(() =>
   import("./routes/Profile.tsx").then((cmp) => cmp.Profile)
 );
@@ -31,14 +32,16 @@ export const MyRouteAwareComponent: FunctionComponent<AppProps> = (
     <LocationProvider scope="/app">
       <ErrorBoundary>
         <Router>
+          {/* example: using component directly as route component itself */}
           <Home path="/app" foo={foo} />
-          {/* Alternative dedicated route component for better TS support */}
+          <Media path="/app/media/:id" />
+          {/* example: Alternative dedicated route component */}
           <Route path="/app/profiles" component={Profiles} />
           <Route<ProfileProps>
             path="/app/profiles/:id"
             component={({ id }) => <Profile id={id} />}
           />
-          {/* `default` prop indicates a fallback route. Useful for 404 pages */}
+          {/* example: `default` prop indicates a fallback route. Useful for 404 pages */}
           <NotFound default />
         </Router>
       </ErrorBoundary>

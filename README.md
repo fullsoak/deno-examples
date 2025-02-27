@@ -29,6 +29,7 @@ deno task test
 
 ## Other platforms
 
+- Examples for Node.js runtime: https://github.com/fullsoak/nodejs-examples
 - Examples for Bun runtime: https://github.com/fullsoak/bun-examples
 - Examples for Cloudflare Workers:
   https://github.com/fullsoak/cloudflare-workers-examples

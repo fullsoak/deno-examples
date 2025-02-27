@@ -12,6 +12,9 @@ export const Home: FunctionComponent<Props> = ({ foo }) => (
         <a href="/app/profiles">Profiles</a>
       </li>
       <li>
+        <a href="/app/media/0">Media Viewer</a>
+      </li>
+      <li>
         <a href="/app/whatever">Whatever</a>
       </li>
       <li>
