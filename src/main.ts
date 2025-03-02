@@ -6,6 +6,7 @@ import {
   ssr,
   useFullSoak,
 } from "fullsoak";
+import { byoHat } from "fullsoak/batteries";
 import { MyComponent } from "./components/MyComponent/index.tsx";
 import { MyRouteAwareComponent } from "./components/MyRouteAwareComponent/index.tsx";
 
@@ -25,7 +26,7 @@ class MyController {
     return ssr(MyRouteAwareComponent, {
       foo: "Lorem Ipsum",
       path: ctx.request.url.pathname,
-    });
+    }, { headContent: byoHat({ title: "FullSoak App" }) });
   }
 }
 
