@@ -1,10 +1,11 @@
-import { type FunctionComponent } from "preact";
+import type { FunctionComponent } from "preact";
+import type { RoutableProps } from "preact-iso";
 import { useEffect, useState } from "preact/hooks";
 import { MyOtherComponent } from "../MyOtherComponent/index.tsx";
 
 console.log("MyComponent is being synchronously imported...");
 
-type MyProps = {
+type MyProps = RoutableProps & {
   foo: string;
 };
 
@@ -24,8 +25,12 @@ export const MyComponent: FunctionComponent<MyProps> = ({ foo }) => {
           <li>props 'foo' is {foo}</li>
           <li>
             state count is {count}{" "}
-            <button onClick={() => setCount((x) => x + 1)}>+</button>
-            <button onClick={() => setCount((x) => x - 1)}>-</button>
+            <button type="button" onClick={() => setCount((x) => x + 1)}>
+              +
+            </button>
+            <button type="button" onClick={() => setCount((x) => x - 1)}>
+              -
+            </button>
           </li>
           <li>
             <a href="/app">Route Aware App Component</a>

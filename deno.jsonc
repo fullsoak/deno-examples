@@ -1,9 +1,10 @@
 {
   "imports": {
-    "fullsoak": "jsr:@fullsoak/fullsoak@0.16.0-alpha.2",
+    "fullsoak": "jsr:@fullsoak/fullsoak@0.16.2",
     "preact": "npm:preact@10.26.4",
     "preact-iso": "npm:preact-iso@2.9.0",
-    "@std/testing": "jsr:@std/testing@^1.0.9"
+    "@std/testing": "jsr:@std/testing@^1.0.9",
+    "superoak": "https://deno.land/x/superoak@4.8.1/mod.ts"
   },
   "nodeModulesDir": "auto",
   "compilerOptions": {

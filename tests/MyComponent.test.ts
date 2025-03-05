@@ -1,8 +1,20 @@
-import { ssr } from "fullsoak";
-import { MyComponent } from "../src/components/MyComponent/index.tsx";
+import { useFullSoak } from "fullsoak/testing";
 import { assertSnapshot } from "@std/testing/snapshot";
+import { superoak } from "superoak";
+import { Controller, Get, ssr } from "fullsoak";
+import { MyComponent } from "../src/components/MyComponent/index.tsx";
+
+@Controller()
+class FooController {
+  @Get("/")
+  serve() {
+    return ssr(MyComponent, { path: "/", foo: "bar" });
+  }
+}
 
 Deno.test("MyComponent", async (t) => {
-  const output = await ssr(MyComponent, { foo: "bar" });
-  await assertSnapshot(t, output);
+  const app = await useFullSoak({ controllers: [FooController] });
+  const req = await superoak(app);
+  const resp = await req.get("/");
+  assertSnapshot(t, resp.text);
 });
