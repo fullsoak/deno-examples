@@ -17,11 +17,8 @@ const GLOBAL_COMPONENTS_DIR: string = Deno.cwd() + "/src/components";
 @Controller()
 class MyController {
   @Get("/")
-  simpleExample(ctx: Context) {
-    return ssr(MyComponent, {
-      path: ctx.request.url.pathname,
-      foo: "bar",
-    });
+  simpleExample() {
+    return ssr(MyComponent, { foo: "bar" });
   }
 
   @Get("/app/:page*")
