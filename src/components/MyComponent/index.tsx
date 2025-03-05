@@ -1,11 +1,10 @@
 import type { FunctionComponent } from "preact";
-import type { RoutableProps } from "preact-iso";
 import { useEffect, useState } from "preact/hooks";
 import { MyOtherComponent } from "../MyOtherComponent/index.tsx";
 
 console.log("MyComponent is being synchronously imported...");
 
-type MyProps = RoutableProps & {
+type MyProps = {
   foo: string;
 };
 

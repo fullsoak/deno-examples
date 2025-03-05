@@ -8,7 +8,7 @@ import { MyComponent } from "../src/components/MyComponent/index.tsx";
 class FooController {
   @Get("/")
   serve() {
-    return ssr(MyComponent, { path: "/", foo: "bar" });
+    return ssr(MyComponent, { foo: "bar" });
   }
 }
 
