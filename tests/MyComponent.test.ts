@@ -16,5 +16,5 @@ Deno.test("MyComponent", async (t) => {
   const app = await useFullSoak({ controllers: [FooController] });
   const req = await superoak(app);
   const resp = await req.get("/");
-  assertSnapshot(t, resp.text);
+  await assertSnapshot(t, resp.text);
 });

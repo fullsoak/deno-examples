@@ -19,5 +19,5 @@ Deno.test("MyRouteAwareComponent", async (t) => {
   const app = await useFullSoak({ controllers: [MyController] });
   const req = await superoak(app);
   const resp = await req.get("/do/some/thing");
-  assertSnapshot(t, resp.text);
+  await assertSnapshot(t, resp.text);
 });
